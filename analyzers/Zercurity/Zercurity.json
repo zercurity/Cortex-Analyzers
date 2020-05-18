@@ -1,0 +1,41 @@
+{
+  "name": "Zercurity",
+  "author": "hugh@zercurity.com",
+  "license": "MIT",
+  "url": "https://github.com/zercurity/cortex-analyzers",
+  "version": "1.0",
+  "description": "Fetch observable details from a Zercurity instance.",
+  "dataTypeList": ["domain", "fqdn", "ip", "hash"],
+  "command": "Zercurity/zercurity.py",
+  "baseConfig": "Zercurity",
+  "configurationItems": [
+    {
+      "name": "url",
+      "description": "Define the URL of the service e.g. https://api.zercurity.com/",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "id",
+      "description": "Define the api id of the service",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "key",
+      "description": "Define the api key of the service",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "company",
+      "description": "Specify a default company UUID",
+      "type": "string",
+      "multi": false,
+      "required": false
+    }
+  ]
+}

@@ -1,5 +1,350 @@
 [
 {
+  "name": "AMPforEndpoints_IsolationStart",
+  "version": "1.0",
+  "author": "Cisco Security",
+  "url": "https://github.com/CiscoSecurity",
+  "license": "MIT",
+  "description": "Start host isolation for an AMP for Endpoints connector",
+  "dataTypeList": [
+    "thehive:case_artifact"
+  ],
+  "baseConfig": "AMPforEndpoints",
+  "config": {
+    "service": "isolationstart"
+  },
+  "configurationItems": [
+    {
+      "name": "amp_cloud",
+      "description": "FQDN of the AMP for Endpoints cloud to interact with",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "client_id",
+      "description": "Client ID for AMP for Endpoints",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "api_key",
+      "description": "API Key for AMP for Endpoints",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "unlock_code",
+      "description": "Custom unlock code used to stop isolation from the endpoint (Maximum 24 characters)",
+      "type": "string",
+      "multi": false,
+      "required": false
+    }
+  ],
+  "dockerImage": "cortexneurons/ampforendpoints_isolationstart:1.0"
+}
+,
+{
+  "name": "AMPforEndpoints_IsolationStop",
+  "version": "1.0",
+  "author": "Cisco Security",
+  "url": "https://github.com/CiscoSecurity",
+  "license": "MIT",
+  "description": "Stop host isolation for an AMP for Endpoints connector",
+  "dataTypeList": [
+    "thehive:case_artifact"
+  ],
+  "baseConfig": "AMPforEndpoints",
+  "config": {
+    "service": "isolationstop"
+  },
+  "configurationItems": [
+    {
+      "name": "amp_cloud",
+      "description": "FQDN of the AMP for Endpoints cloud to interact with",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "client_id",
+      "description": "Client ID for AMP for Endpoints",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "api_key",
+      "description": "API Key for AMP for Endpoints",
+      "type": "string",
+      "multi": false,
+      "required": true
+    }
+  ],
+  "dockerImage": "cortexneurons/ampforendpoints_isolationstop:1.0"
+}
+,
+{
+  "name": "AMPforEndpoints_MoveGUID",
+  "version": "1.0",
+  "author": "Cisco Security",
+  "url": "https://github.com/CiscoSecurity",
+  "license": "MIT",
+  "description": "Move an AMP for Endpoints connector GUID to a different Group",
+  "dataTypeList": [
+    "thehive:case_artifact"
+  ],
+  "baseConfig": "AMPforEndpoints",
+  "config": {
+    "service": "moveguid"
+  },
+  "configurationItems": [
+    {
+      "name": "amp_cloud",
+      "description": "FQDN of the AMP for Endpoints cloud to interact with",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "client_id",
+      "description": "Client ID for AMP for Endpoints",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "api_key",
+      "description": "API Key for AMP for Endpoints",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "group_guid",
+      "description": "AMP for Endpoints Group GUID for the group connectors will be moved to",
+      "type": "string",
+      "multi": false,
+      "required": true
+    }
+  ],
+  "dockerImage": "cortexneurons/ampforendpoints_moveguid:1.0"
+}
+,
+{
+  "name": "AMPforEndpoints_SCDAdd",
+  "version": "1.0",
+  "author": "Cisco Security",
+  "url": "https://github.com/CiscoSecurity",
+  "license": "MIT",
+  "description": "Add a SHA256 to an AMP for Endpoints Simple Custom Detection list",
+  "dataTypeList": [
+    "thehive:case_artifact"
+  ],
+  "baseConfig": "AMPforEndpoints",
+  "config": {
+    "service": "scdadd"
+  },
+  "configurationItems": [
+    {
+      "name": "amp_cloud",
+      "description": "FQDN of the AMP for Endpoints cloud to interact with",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "client_id",
+      "description": "Client ID for AMP for Endpoints",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "api_key",
+      "description": "API Key for AMP for Endpoints",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "scd_guid",
+      "description": "AMP for Endpoints Simple Custom Detection GUID",
+      "type": "string",
+      "multi": false,
+      "required": true
+    }
+  ],
+  "dockerImage": "cortexneurons/ampforendpoints_scdadd:1.0"
+}
+,
+{
+  "name": "AMPforEndpoints_SCDRemove",
+  "version": "1.0",
+  "author": "Cisco Security",
+  "url": "https://github.com/CiscoSecurity",
+  "license": "MIT",
+  "description": "Remove a SHA256 to an AMP for Endpoints Simple Custom Detection list",
+  "dataTypeList": [
+    "thehive:case_artifact"
+  ],
+  "baseConfig": "AMPforEndpoints",
+  "config": {
+    "service": "scdremove"
+  },
+  "configurationItems": [
+    {
+      "name": "amp_cloud",
+      "description": "FQDN of the AMP for Endpoints cloud to interact with",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "client_id",
+      "description": "Client ID for AMP for Endpoints",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "api_key",
+      "description": "API Key for AMP for Endpoints",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "scd_guid",
+      "description": "AMP for Endpoints Simple Custom Detection GUID",
+      "type": "string",
+      "multi": false,
+      "required": true
+    }
+  ],
+  "dockerImage": "cortexneurons/ampforendpoints_scdremove:1.0"
+}
+,
+{
+  "name": "DNS-RPZ",
+  "version": "1.0",
+  "author": "Michael Hornung; Expeditors International of Washington, Inc.",
+  "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
+  "license": "AGPL-V3",
+  "description": "Add a dynamic DNS entry to a Response Policy Zone, blackholing or redirecting a FQDN.",
+  "dataTypeList": [
+    "thehive:case_artifact"
+  ],
+  "baseConfig": "DNS-RPZ",
+  "config": {
+    "max_tlp": 3,
+    "check_tlp": false,
+    "max_pap": 3,
+    "check_pap": true
+  },
+  "configurationItems": [
+    {
+      "name": "bind_server",
+      "description": "IP or FQDN of RPZ master BIND server",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "127.0.0.1"
+    },
+    {
+      "name": "tsig_keyname",
+      "description": "Name of TSIG key to access BIND server",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "cortex."
+    },
+    {
+      "name": "tsig_keyval",
+      "description": "TSIG key value to access BIND server",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "updateme"
+    },
+    {
+      "name": "tsig_hashalg",
+      "description": "TSIG hash algorithm to use",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "HMAC-SHA512"
+    },
+    {
+      "name": "rpz_zonename",
+      "description": "Fully qualified RPZ zone name (don't forget the trailing dot)",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "rpz."
+    },
+    {
+      "name": "remediation_ip",
+      "description": "IP to resolve RPZ names to",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "127.0.0.1"
+    }
+  ],
+  "dockerImage": "cortexneurons/dns-rpz:1.0"
+}
+,
+{
+  "name": "DomainToolsIris_AddRiskyDNSTag",
+  "version": "1.0",
+  "author": "DomainTools",
+  "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
+  "license": "AGPL-V3",
+  "description": "Add Tag saying that the case contains a risky DNS.",
+  "dataTypeList": [
+    "thehive:case_artifact"
+  ],
+  "baseConfig": "DomainToolsIris",
+  "configurationItems": [
+    {
+      "name": "high_risk_threshold",
+      "description": "Risk score threshold to be considered high risk.",
+      "type": "number",
+      "multi": false,
+      "required": false,
+      "defaultValue": 70
+    }
+  ],
+  "dockerImage": "cortexneurons/domaintoolsiris_addriskydnstag:1.0"
+}
+,
+{
+  "name": "DomainToolsIris_CheckMaliciousTags",
+  "version": "1.0",
+  "author": "DomainTools",
+  "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
+  "license": "AGPL-V3",
+  "description": "Add Tag saying that the observable and case have a malicious tag in their Iris Tags.",
+  "dataTypeList": [
+    "thehive:case_artifact"
+  ],
+  "baseConfig": "DomainToolsIris",
+  "configurationItems": [
+    {
+      "name": "monitored_iris_tags",
+      "description": "Monitored Iris tags.",
+      "type": "string",
+      "multi": true,
+      "required": false
+    }
+  ],
+  "dockerImage": "cortexneurons/domaintoolsiris_checkmalicioustags:1.0"
+}
+,
+{
   "name": "Crowdstrike Falcon Custom IOC API",
   "version": "1.0",
   "author": "Michael",
@@ -35,6 +380,66 @@
     }
   ],
   "dockerImage": "cortexneurons/crowdstrike falcon custom ioc api:1.0"
+}
+,
+{
+  "name": "KnowBe4",
+  "version": "1.0",
+  "author": "Kyle Parrish",
+  "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
+  "license": "AGPL-V3",
+  "description": "Add 'Clicked Event' to User via User Events API.",
+  "dataTypeList": [
+    "thehive:case_artifact"
+  ],
+  "baseConfig": "KnowBe4",
+  "configurationItems": [
+    {
+      "name": "api_url",
+      "description": "Base API url",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "https://api.events.knowbe4.com/events"
+    },
+    {
+      "name": "hive_url",
+      "description": "Specify The Hive Instance URL",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "api_key",
+      "description": "Api Key",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "required_tag",
+      "description": "Specify a tag that must be present for responder to run.",
+      "type": "string",
+      "multi": false,
+      "required": false
+    },
+    {
+      "name": "event_type",
+      "description": "Specify the Event Type for the new event. https://developer.knowbe4.com/events/#tag/Event-Types",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "risk_level",
+      "description": "Specify the desired risk level. https://developer.knowbe4.com/events/#tag/Events/paths/~1events/post",
+      "type": "integer",
+      "multi": false,
+      "required": false,
+      "defaultValue": 10
+    }
+  ],
+  "dockerImage": "cortexneurons/knowbe4:1.0"
 }
 ,
 {
@@ -78,8 +483,206 @@
 }
 ,
 {
-  "name": "Umbrella Blacklister",
+  "name": "Minemeld",
   "version": "1.0",
+  "author": "Wes Lambert, Security Onion Solutions",
+  "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
+  "license": "AGPL-V3",
+  "description": "Submit indicator to Minemeld",
+  "dataTypeList": [
+    "thehive:case_artifact"
+  ],
+  "baseConfig": "Minemeld",
+  "configurationItems": [
+    {
+      "name": "minemeld_url",
+      "description": "URL for Minemeld instance",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "https://x.x.x.x"
+    },
+    {
+      "name": "minemeld_user",
+      "description": "User for Minemeld",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "apiuser"
+    },
+    {
+      "name": "minemeld_password",
+      "description": "Password for Minemeld",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "password"
+    },
+    {
+      "name": "minemeld_indicator_list",
+      "description": "Name of indicator list to which indicators will be added",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "my_block_list"
+    },
+    {
+      "name": "minemeld_share_level",
+      "description": "Share level for indicator",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "red"
+    },
+    {
+      "name": "minemeld_confidence",
+      "description": "Confidence level for indicator",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "100"
+    },
+    {
+      "name": "minemeld_ttl",
+      "description": "TTL for indicator",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "86400"
+    }
+  ],
+  "dockerImage": "cortexneurons/minemeld:1.0"
+}
+,
+{
+  "name": "QRadar_Auto_Closing_Offense",
+  "version": "1.0",
+  "author": "Florian Perret",
+  "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
+  "license": "AGPL-V3",
+  "description": "Closing the QRadar Offense associated to your case in one clic !",
+  "dataTypeList": [
+    "thehive:case"
+  ],
+  "baseConfig": "QRadarAutoClose",
+  "configurationItems": [
+    {
+      "name": "QRadar_API_Key",
+      "description": "A QRadar API key with sufficent rights to close an offense",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "QRadar_Url",
+      "description": "URL of your QRadar API, must be accessible from Cortex server. eg: myqradar.myorg.com/api/siem/offenses",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "Cert_Path",
+      "description": "If you need a certificate to authentificate to your QRadar API, please provide the path here",
+      "type": "string",
+      "multi": false,
+      "required": false
+    }
+  ],
+  "dockerImage": "cortexneurons/qradar_auto_closing_offense:1.0"
+}
+,
+{
+  "name": "Redmine_Issue",
+  "version": "1.0",
+  "author": "Marc-André DOLL",
+  "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
+  "license": "AGPL-V3",
+  "description": "Create a redmine issue from a case",
+  "dataTypeList": [
+    "thehive:case",
+    "thehive:case_task"
+  ],
+  "baseConfig": "Redmine",
+  "configurationItems": [
+    {
+      "name": "instance_name",
+      "description": "Name of the Redmine instance",
+      "multi": false,
+      "required": false,
+      "type": "string",
+      "defaultValue": "redmine"
+    },
+    {
+      "name": "url",
+      "description": "URL where to find the Redmine API",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "username",
+      "description": "Username to log into Redmine",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "password",
+      "description": "Password to log into Redmine",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "project_field",
+      "description": "Name of the custom field containing the Redmine project to use when creating the issue",
+      "multi": false,
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "tracker_field",
+      "description": "Name of the custom field containing the Redmine tracker to use when creating the issue",
+      "multi": false,
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "assignee_field",
+      "description": "Name of the custom field containing the Redmine assignee to use when creating the issue",
+      "multi": false,
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "reference_field",
+      "description": "Name of the case custom field in which to store the opened issue. If not defined, this information will not be stored",
+      "type": "string",
+      "required": false,
+      "multi": false
+    },
+    {
+      "name": "opening_status",
+      "description": "Status used when opening a Redmine issue (if not defined here, will use the default opening status from the Redmine Workflow)",
+      "type": "string",
+      "multi": false,
+      "required": false
+    },
+    {
+      "name": "closing_task",
+      "description": "Closing the task after successfully creating the Redmine issue",
+      "type": "boolean",
+      "multi": false,
+      "defaultValue": false,
+      "required": false
+    }
+  ],
+  "dockerImage": "cortexneurons/redmine_issue:1.0"
+}
+,
+{
+  "name": "Umbrella Blacklister",
+  "version": "1.1",
   "author": "Kyle Parrish",
   "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
   "license": "AGPL-V3",
@@ -97,6 +700,111 @@
       "required": true
     }
   ],
-  "dockerImage": "cortexneurons/umbrella blacklister:1.0"
+  "dockerImage": "cortexneurons/umbrella blacklister:1.1"
+}
+,
+{
+  "name": "Wazuh",
+  "version": "1.0",
+  "author": "Wes Lambert",
+  "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
+  "license": "AGPL-V3",
+  "description": "Block an IP on a host via Wazuh agent",
+  "dataTypeList": [
+    "thehive:case",
+    "thehive:case_artifact"
+  ],
+  "baseConfig": "Wazuh",
+  "configurationItems": [
+    {
+      "name": "wazuh_manager",
+      "description": "URL for Wazuh Manager",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "https://localhhost:55000"
+    },
+    {
+      "name": "wazuh_user",
+      "description": "User for Wazuh Manager",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "foo"
+    },
+    {
+      "name": "wazuh_password",
+      "description": "Password for Wazuh Manager",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "bar"
+    }
+  ],
+  "dockerImage": "cortexneurons/wazuh:1.0"
+}
+,
+{
+  "name": "ZEROFOX_Close_alert",
+  "version": "1.0",
+  "author": "TheHive-Project",
+  "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
+  "license": "AGPL-V3",
+  "description": "Close alert in Zerofox",
+  "dataTypeList": [
+    "thehive:case"
+  ],
+  "baseConfig": "ZEROFOX",
+  "configurationItems": [
+    {
+      "name": "url",
+      "description": "URL for Zerofox API",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "https://api.zerofox.com/1.0"
+    },
+    {
+      "name": "api",
+      "description": "Key API for Zerofox",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": ""
+    }
+  ],
+  "dockerImage": "cortexneurons/zerofox_close_alert:1.0"
+}
+,
+{
+  "name": "ZEROFOX_Takedown_request",
+  "version": "1.0",
+  "author": "TheHive-Project",
+  "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
+  "license": "AGPL-V3",
+  "description": "Request for a takedown regarding the alert in Zerofox",
+  "dataTypeList": [
+    "thehive:case"
+  ],
+  "baseConfig": "ZEROFOX",
+  "configurationItems": [
+    {
+      "name": "url",
+      "description": "URL for Zerofox API",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "https://api.zerofox.com/1.0"
+    },
+    {
+      "name": "api",
+      "description": "Key API for Zerofox",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": ""
+    }
+  ],
+  "dockerImage": "cortexneurons/zerofox_takedown_request:1.0"
 }
 ]
